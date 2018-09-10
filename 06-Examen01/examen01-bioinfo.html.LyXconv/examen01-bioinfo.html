@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="es" > 
+<head><title>Examen 01: Busquedas usando BLAST:
+Bioinformatica
+Pontificia Universidad Javeriana - Cali
+Prof. Luis Garreta
+</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="examen01-bioinfo.tex"> 
+<link rel="stylesheet" type="text/css" href="examen01-bioinfo.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">Exámen 01: Búsquedas usando BLAST:<br />
+Bioinformática<br />
+Pontificia Universidad Javeriana - Cali<br />
+Prof. Luis Garreta<br />
+</h2>
+<div class="author" ></div><br />
+<div class="date" ><span 
+class="bchr8t-x-x-120">10</span><span 
+class="bchr8t-x-x-120">&#x00A0;de septiembre</span><span 
+class="bchr8t-x-x-120">&#x00A0;de</span><span 
+class="bchr8t-x-x-120">&#x00A0;2018</span></div>
+   </div>
+   <h3 class="sectionHead"><span class="titlemark">1.    </span> <a 
+ id="x1-10001"></a>Primera Parte</h3>
+     <ul class="itemize1">
+     <li class="itemize">Para algunas tareas, utilizará la herramienta BLAST en la página web de NCBI http://www.ncbi.nlm.nih.gov/.
+     Puede ubicar fácilmente la herramienta en la sección ~Recursos populares~. Para otras herramientas, busque
+     en Internet la más adecuada o experimente una.
+     </li>
+     <li class="itemize">Escriba un informe sobre sus resultados (llámelo ~general_questions.pdf~) y agregue cifras descriptivas cuando
+     sea necesario. los la tarea de esta conferencia es casi idéntica a la práctica, así que te recomiendo que ya
+     escribas sus respuestas abajo</li></ul>
+<!--l. 51--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">1.1.    </span> <a 
+ id="x1-20001.1"></a>Pregunta</h4>
+<!--l. 52--><p class="noindent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-2002x1">Tienes una secuencia ATGGTGA . Crea secuencias homólogas de esa secuencia donde durante la evolución
+     cuando se ha producido una deleción, se ha producido una inserción y se ha producido una sustitución. (por
+     ejemplo, TGGGTGG <span 
+class="cmsy-10">&#x2192; </span>TGGGTG (deleción)).
+     </li>
+     <li 
+  class="enumerate" id="x1-2004x2">¿Cuál es la diferencia entre los algoritmos BLAST blastn y blastp ? ¿Qué son? ¿En que casos se usan?
+     </li>
+     <li 
+  class="enumerate" id="x1-2006x3">Usted tiene una secuencia de proteína putativa EYLASLGRKHRAVGVKLSSFSTVGESLLYMLEKC que usted quiere
+     explorar más de cerca. Use BLAST solo contra secuencias humanas. a
+         <ol  class="enumerate2" >
+         <li 
+  class="enumerate" id="x1-2008x1">¿Cuál es la ID de acceso y la puntuación máxima de la secuencia de BLAST de mayor puntuación?
+         </li>
+         <li 
+  class="enumerate" id="x1-2010x2">¿Cuál es el nombre del gen que codifica esta secuencia de proteína?
+         </li>
+         <li 
+  class="enumerate" id="x1-2012x3">¿Se  ha  detectado  algún  supuesto  dominio  de  conservación?  Si  es  así,  ¿cuáles  son  estos  supuestos
+         dominios conservados detectados?</li></ol>
+     </li>
+     <li 
+  class="enumerate" id="x1-2014x4">Consulte la siguiente secuencia de nucleótidos usando la herramienta BLAST en la web de NCBI. BLAST
+     contra secuencias humanas solamente y contra de la base de datos ~Secuencias de ARN de referencia
+     (refseq_rna)~
+     <!--l. 74-->
+     <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-2015r1"></a></span>GCTCTGGTGACCAGGACAAGGGAGGGAAGGAAGGACCCTGTGCCTGGCAAAAGTCCAGGTCGCTTCTCAGGATTTGT&#x00A0;<br /><span class="label"><a 
+ id="x1-2016r2"></a></span>GGCACCTTCTGACTGTCAAACTGTTCTTGTCAATCTCACAGGCTCCTGGTTGTCTACCCATGGACCCAGAGGTTCTT&#x00A0;<br /><span class="label"><a 
+ id="x1-2017r3"></a></span>TGACAGCTTTGGCAACCTGTCCTCTGCCTCTGCCATCATGGGCAACCCCAAAGTCAAGGCACATGGCAAGAAGGTGC&#x00A0;<br /><span class="label"><a 
+ id="x1-2018r4"></a></span>TGACTTCCTTGGGAGATGCCACAAAGCACCTGGATGATCTCAAGGGCACCTTTGCCCAGCTGAGTGAACTGCACTGT&#x00A0;<br /><span class="label"><a 
+ id="x1-2019r5"></a></span>GACAAGCTGCATGTGGATCCTGAGAACTTCAAGGTGAGTCCAGGAGATGTTTCAGCCCTGTTGCCTTTAGTCTCGAG&#x00A0;<br /><span class="label"><a 
+ id="x1-2020r6"></a></span>GCAACTTAGACAACGGAGTATTGATCTGAGCACAGCAGGGTGTGAGCTGTTTG
+     </div>
+     <!--l. 82--><p class="noindent" >
+         <ol  class="enumerate2" >
+         <li 
+  class="enumerate" id="x1-2022x1">¿Cuántos resultados obtienes?
+         </li>
+         <li 
+  class="enumerate" id="x1-2024x2">¿A qué gen pertenece esta secuencia según la identidad del 100 %?
+         </li>
+         <li 
+  class="enumerate" id="x1-2026x3">Cuáles son las coordenadas del <span 
+class="bchri8t-">match </span>en la secuencia del sujeto del mejor <span 
+class="bchri8t-">match</span>?
+         </li>
+         <li 
+  class="enumerate" id="x1-2028x4">Cuál es la identidad del segundo mejor puntaje de puntuación? Explica lo que significa y ¿Qué nucleótidos
+         no coinciden entre sí?</li></ol>
+     </li>
+     <li 
+  class="enumerate" id="x1-2030x5">Recuperar la secuencia de proteína de NCBI codificada por la subunidad de hemoglobina humana gamma-1 (ID de
+     acceso es NP_000550.2) y secuencia de proteínas codificada por hemoglobina gamma A de rata (el ID de acceso es
+     NP_742090.1). Muestra estas secuencias en tu informe. Vaya al sitio de EBI (http://www.ebi.ac.uk) y ubique las
+     herramientas de alineación de pares de secuencia (tools PSA https://www.ebi.ac.uk/Tools/psa/)
+         <ol  class="enumerate2" >
+         <li 
+  class="enumerate" id="x1-2032x1">Utilice el algoritmo Needleman-Wunsch (EMBOSS Needle) para realizar una alineación global en las dos
+         secuencias de proteínas anteriores. Copie y pegue el archivo de alineación completo (excepto los parámetros del
+         programa) a su informe. En función de los resultados,
+             <ul class="itemize1">
+             <li class="itemize">¿Cuál es la identidad y la similitud de esta alineación con los parámetros predeterminados?
+             </li>
+             <li class="itemize">Hay algunos <span 
+class="bchri8t-">gaps</span>?
+             </li>
+             <li class="itemize">Asigne la apertura de gap y la extensión de gap a valores muy bajas y/o muy altos y ejecutar el
+             algoritmo de nuevo. ¿Cuál es la diferencia entre la alineación anterior y la nueva alineación. Copie y
+             pegue los archivos de alineación completos (excepto los parámetros del programa) a su informe.</li></ul>
+         </li>
+         <li 
+  class="enumerate" id="x1-2034x2">Ahora use el algoritmo Smith-Waterman (EMBOSS Water) para la alineación local en el dos secuencias de
+         proteínas arriba. Copie y pegue el archivo de alineación completo (excepto parámetros del programa) a su
+         informe. En función de los resultados,
+             <ul class="itemize1">
+             <li class="itemize">Cuál es la identidad y similitud de esta alineación con los parámetros predeterminados?
+             </li>
+             <li class="itemize">Hay algunos gaps?
+             </li>
+             <li class="itemize">Selecciona el apertura de gap y extensión de gap a penalizaciones muy bajas y / o muy altas y ejecuta
+             el algoritmo de nuevo. ¿Cuál es la diferencia entre la alineación anterior y la nueva alineación. Copie
+             y pegue los archivos de alineación completos (excepto los parámetros del programa) a su informe.</li></ul>
+         </li>
+         <li 
+  class="enumerate" id="x1-2036x3">Dibuja un <span 
+class="bchri8t-">dot plot </span>usando las dos secuencias de proteínas en el ejercicio 5. Busca alguna herramienta de dotplot
+         en la web.
+             <ul class="itemize1">
+             <li class="itemize">Use el tamaño de ventana 1 y la identidad mínima 1 para dibujar el gráfico. Copie y pegue el plot a
+             tu reporte
+             </li>
+             <li class="itemize">Cambia el tamaño de la ventana y la identidad mínima y dibuja el plot. Reporta el plot en tu informe
+             Explica  qué  sucede  cuando  cambias  los  requerimientos  de  tamaño  de  la  ventana  y  la  identidad
+             mínima.</li></ul>
+         </li></ol>
+     </li>
+     <li 
+  class="enumerate" id="x1-2038x6">Usa las secuencias LYMLEKCLGPAFTPATRAAWSQLYGAV y LYMLFTPAFTPATRAAASQL y crea un matriz de puntuación
+     con el algoritmo Needleman-Wunsch a mano (en Excel, por ejemplo). Utilizar la Matriz BLOSUM62 para calcular los
+     puntajes de sustitución de aminoácidos en la matriz de puntuación y penalización de gap -2. Reporte la matriz de
+     puntuación y la alineación final.</li></ol>
+<!--l. 143--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2.    </span> <a 
+ id="x1-30002"></a>Segunda Parte</h3>
+<!--l. 145--><p class="noindent" >El GenBank contiene más de 200 millones de secuencias, con más de 260 mil millones de nucleótidos. BLAST puede usarse
+para comparar una secuencia desconocida con todas las secuencias en GenBank y encontrar secuencias que coincidan. Esto
+puede ser útil para determinar la posible identidad de una secuencia desconocida.
+<!--l. 151--><p class="indent" >   En esta actividad usarás BLAST para identificar secuencias desconocidas, para esto:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-3002x1">Abre en una ventana la guía de los pasos generales para búsquedas en BLAST vistos en clase.
+     </li>
+     <li 
+  class="enumerate" id="x1-3004x2">Busca el sitio de BLAST en NCBI y ábrelo en una segunda ventana.
+     </li>
+     <li 
+  class="enumerate" id="x1-3006x3">Toma tres secuencias (abajo) de acuerdo a la siguiente tabla y responda las preguntas (al final)
+     <div class="center" 
+>
+<!--l. 159--><p class="noindent" >
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"></colgroup><colgroup id="TBL-2-2g"><col 
+id="TBL-2-2"></colgroup><colgroup id="TBL-2-3g"><col 
+id="TBL-2-3"></colgroup><colgroup id="TBL-2-4g"><col 
+id="TBL-2-4"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-1"  
+class="td11"><span 
+class="bchb8t-">Estudiante</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-2"  
+class="td11"><span 
+class="bchb8t-">Seq1</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-3"  
+class="td11"><span 
+class="bchb8t-">Seq2</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-4"  
+class="td11"><span 
+class="bchb8t-">Seq3</span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-1"  
+class="td11">    1        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
+class="td11">  1   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-3"  
+class="td11">  2   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-4"  
+class="td11">  5   </td></tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-1"  
+class="td11"> 2 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-2"  
+class="td11"> 2 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-3"  
+class="td11"> 4 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-4"  
+class="td11"> 6</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-1"  
+class="td11">    3        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-2"  
+class="td11">  3   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-3"  
+class="td11">  5   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-4"  
+class="td11">  7   </td></tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-1"  
+class="td
+11">    4        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-2"  
+class="td11">  4   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-3"  
+class="td11">  6   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-4"  
+class="td11">  1   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-1"  
+class="td11">    5        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-2"  
+class="td11">  5   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-3"  
+class="td11">  7   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-4"  
+class="td11">  2   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-1"  
+class="td11">    6        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-2"  
+class="td11">  6   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-3"  
+class="td11">  1   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-4"  
+class="td11">  3   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-1"  
+class="td11">    7        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-2"  
+class="td11">  7   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-3"  
+class="td11">  2   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-4"  
+class="td11">  4   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-9-1"  
+class="td11">    8        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-9-2"  
+class="td11">  1   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-9-3"  
+class="td11">  3   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-9-4"  
+class="td11">  8   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-10-1"  
+class="td11">          </td>
+</tr></table></div>
+</div>
+     </li></ol>
+<!--l. 212--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.    </span> <a 
+ id="x1-40002.1"></a>Secuencias</h4>
+     <ul class="itemize1">
+     <li class="itemize">Secuencia 1
+     <!--l. 217-->
+     <div class="lstlisting" id="listing-2"><span class="label"><a 
+ id="x1-4001r1"></a></span>TCGAAATAACGCGTGTTCTCAACGCGGTCGCGCAGATGCCTTTGCTCATCAGATGCGACCGCAAC&#x00A0;<br /><span class="label"><a 
+ id="x1-4002r2"></a></span>CACGTCCGCCGCCTTGTTCGCCGTCCCCGTGCCTCAACCACCACCACGGTGTCGTCTTCCCCGAA&#x00A0;<br /><span class="label"><a 
+ id="x1-4003r3"></a></span>CGCGTCCCGGTCAGCCAGCCTCCACGCGCCGCGCGCGCGGAGTGCCCATTCGGGCCGCAGCTGCG&#x00A0;<br /><span class="label"><a 
+ id="x1-4004r4"></a></span>ACGGTGCCGCTCAGATTCTGTGTGGCAGGCGCGTGTTGGAGTCTAAA
+     </div>
+     </li>
+     <li class="itemize">Secuencia 2:
+     <!--l. 225-->
+     <div class="lstlisting" id="listing-3"><span class="label"><a 
+ id="x1-4005r1"></a></span>GTTTATTAGTGATCATGGCTAAGTTTGCGTCCATCATCGCACTTCTTTTTGCTGCTCTTGTTCTTT&#x00A0;<br /><span class="label"><a 
+ id="x1-4006r2"></a></span>TTGCTGCTTTCGAAGCACCAACAATGGTGGAAGCACAGAAGTTGTGCGAAAGGCCAAGTGGGACAT&#x00A0;<br /><span class="label"><a 
+ id="x1-4007r3"></a></span>GGTCAGGAGTCTGTGGAAACAATAACGCATGCAAGAATCAGTGCATTAACCTTGAGAAAGCACGAC&#x00A0;<br /><span class="label"><a 
+ id="x1-4008r4"></a></span>ATGGATCTTGCAACTATGTCTTCCCAGCTCACAAGTGTATCTGCTACTTTCCTTGTTAATTTATCG&#x00A0;<br /><span class="label"><a 
+ id="x1-4009r5"></a></span>CAAACTCTTTGGTGAATAGTTTTTATGTAATTTACACAAAATAAGTCAGTGTCACTATCCATGAGT&#x00A0;<br /><span class="label"><a 
+ id="x1-4010r6"></a></span>GATTTTAAGACATGTACCAGATATGTTATGTTGGTTCGGTTATACAAATAAAGTTTTATTCACCA
+     </div>
+     </li>
+     <li class="itemize">Secuencia 3:
+     <!--l. 235-->
+     <div class="lstlisting" id="listing-4"><span class="label"><a 
+ id="x1-4011r1"></a></span>CTCGAGACTAGTTCTCTCTCTCTCTCTCTCGTGCCGCATCTCACACCTGTGGATGGACGGCAGCTG&#x00A0;<br /><span class="label"><a 
+ id="x1-4012r2"></a></span>AACCGCGGGAAACTTTCGTTCTCACTCTACCTAGATGAACTTTAGTTTATATTAAACACGCGTCGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4013r3"></a></span>CTCCCACACAAACCGTGCTCGTTTTACATCTTTGTCTCCGCTTTTGAAAACGAGAAGTTGAATTCG&#x00A0;<br /><span class="label"><a 
+ id="x1-4014r4"></a></span>CAAGACGCAACTTTCCAGCCCCTCACTGAGCGGGCAGAGTCCGTGAAGCGATGGAGCCGTCCGTCA&#x00A0;<br /><span class="label"><a 
+ id="x1-4015r5"></a></span>TTCCCGGTGCTGACATACCCGACCTTTACTCCATTAACCCGTTTAATGTCACTTTTCCCGACGACG&#x00A0;<br /><span class="label"><a 
+ id="x1-4016r6"></a></span>TTTTGAGTTTCGTTCCTGATGGGAGGAACTACACCGAACCTAACCCGGTAAAGAGCCGCGGAATCA&#x00A0;<br /><span class="label"><a 
+ id="x1-4017r7"></a></span>TCATCGCCATTTCCATCACCGCTC
+     </div>
+     </li>
+     <li class="itemize">Secuencia 4:
+     <!--l. 246-->
+     <div class="lstlisting" id="listing-5"><span class="label"><a 
+ id="x1-4018r1"></a></span>GACATTACGGCGACCCAGTCTCCCCCGGTGTTGTCAGTGGGACTGGGCCAGACCGCAACCATCACTT&#x00A0;<br /><span class="label"><a 
+ id="x1-4019r2"></a></span>GTACGGCCAGTCAAAGCATCTACAGTAACCTTGCTTGGTACCAGCAGAGAGAAGGACAGAAGCCCTC&#x00A0;<br /><span class="label"><a 
+ id="x1-4020r3"></a></span>TCTCCTGATCTATGCTGCGACAACGCGATACGAAGGAGTCTCCGAGCGATTCAGCGGCAGTGGATCA&#x00A0;<br /><span class="label"><a 
+ id="x1-4021r4"></a></span>GGGACCAGTTTCACCCTGACAATCAGCAACGTTCAGAATGAGGATGTCGCTGACTATTACTGTCAGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4022r5"></a></span>TCGCATATTCGATCTACTCCGGTTCCGTTGTTTTCGGTGAAGGAACCAAGCTCAGACTGAGCCGT
+     </div>
+     </li>
+     <li class="itemize">Secuencia 5:
+     <!--l. 255-->
+     <div class="lstlisting" id="listing-6"><span class="label"><a 
+ id="x1-4023r1"></a></span>GAATTCGCGGCCGCATGGGGGAGAAGCTGCCGGTTGTGTATAAACGCTTCATCTGCTCGTTCCCGGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4024r2"></a></span>TTGTAATGCCACGTATAACAAGAACCGGAAGCTGCAGGCCCATCTGTGCAAGCACACGGGGGAGAGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4025r3"></a></span>CCGTTTCCTTGCACATATGAAGGCTGTGAGAAAGGCTTTGTGACGCTGCATCACCTGAATCGTCATG&#x00A0;<br /><span class="label"><a 
+ id="x1-4026r4"></a></span>TGCTCTCCCACACCGGGGAGAAACCCTGCAAATGCGAAACGGAAAATTGCAATTTGGCGTTCACCAC&#x00A0;<br /><span class="label"><a 
+ id="x1-4027r5"></a></span>AGCATCCAACATGAGGTTGCACTTCAAAAGGGCTCATTCTTCTCCGGCGCAGGTCTACGTGTGTTAT&#x00A0;<br /><span class="label"><a 
+ id="x1-4028r6"></a></span>TTCGCAGACTGTGGCCAGCAGTTCAGGAAACATAACCAGCTAAAAATTCACCAGTATATCCATACAA&#x00A0;<br /><span class="label"><a 
+ id="x1-4029r7"></a></span>ACCAGCAACCCTTCAAAT
+     </div>
+     </li>
+     <li class="itemize">Secuencia 6:
+     <!--l. 266-->
+     <div class="lstlisting" id="listing-7"><span class="label"><a 
+ id="x1-4030r1"></a></span>GCCCAGCGTCTCTCGGAGGAAGCTAATTCTCAGGTTATCGCAGAGGAATCTCTTGTAGCTCGTGCTGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4031r2"></a></span>GGCTACCGTTGTCCAAGCCGCCGCTCCAACCAAATCCCTTGATCTGACAACATGGAAGTATGCTGATC&#x00A0;<br /><span class="label"><a 
+ id="x1-4032r3"></a></span>TCAGAGACACTATCAACACCTCAATCGATATTGCGCTCCTGTCAGCCTGCAAGGAGGAGTTCCATCGT&#x00A0;<br /><span class="label"><a 
+ id="x1-4033r4"></a></span>CGTCTCAAGGTCTACCACGCCTGGAAGATGAAGAATAAGAAGGTTGCCGCCGGCGACAAGGGCGGACC&#x00A0;<br /><span class="label"><a 
+ id="x1-4034r5"></a></span>AGAGAGGGCTCCACAATCCATCTTTGAAAGTGCCCAACAATACAACCAGCTGGCACCCCCTCCGAAAG&#x00A0;<br /><span class="label"><a 
+ id="x1-4035r6"></a></span>CCACCAAGGCTGCCCCAGCCAATCAGAACATCCAACGCTTCTTCAGGGTGCCTTTCTCCGTGACTGGG&#x00A0;<br /><span class="label"><a 
+ id="x1-4036r7"></a></span>TCCACCGCTCAGGGTCAGATGCCCGAGAGGGGTTGGTGGTACGCCCACTTTGACGGTCAGTGGATCGC&#x00A0;<br /><span class="label"><a 
+ id="x1-4037r8"></a></span>CCGCCAGATGGAGGTACACCCCACCAAGGTCCCCGTTCTTCTGGTTGCAGGTAAAGATGATGAGAACA&#x00A0;<br /><span class="label"><a 
+ id="x1-4038r9"></a></span>TGTGTGAGATGAGTTTGGAGGAGACTGGGTTGACACGACGTCCCAACGCCGAGATCGTCGAGCGGGAG&#x00A0;<br /><span class="label"><a 
+ id="x1-4039r10"></a></span>TTTGAGGAGCCCTGGAAGCGTAGCGGCGGTCAGCAGTACCACATGGCTGCAGTACGCAACAAGCAGGC&#x00A0;<br /><span class="label"><a 
+ id="x1-4040r11"></a></span>TAGACCAACGTGGGCCACGCAGAGCTTGAA
+     </div>
+     </li>
+     <li class="itemize">Secuencia 7:
+     <!--l. 281-->
+     <div class="lstlisting" id="listing-8"><span class="label"><a 
+ id="x1-4041r1"></a></span>AACAATTCATTTTTCCTGCTTTCCTAGAAAATTCTATAAAAGCTTCAAAATGAATTACTTGGTGATGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4042r2"></a></span>TTAGTTTGGCACTTCTCTTCGTGACAGGTGTAGAGAGTGTAAAAGACGGTTATATTGTCGACGATGTA&#x00A0;<br /><span class="label"><a 
+ id="x1-4043r3"></a></span>AACTGCACATACTTTTGTGGTAGAAATGCATACTGCAACGAGGAATGTACCAAGTTGAAAGGTGAGAG&#x00A0;<br /><span class="label"><a 
+ id="x1-4044r4"></a></span>TGGTTATTGCCAATGGGCAAGTCCATATGGAAACGCCTGTTATTGCTATAAATTGCCCGATCATGTAC&#x00A0;<br /><span class="label"><a 
+ id="x1-4045r5"></a></span>GTACTAAAGGACCAGGAAGATGCCATGGCCGATAAATTATAAGATGGAATGTATCCTAAGTATCAATG&#x00A0;<br /><span class="label"><a 
+ id="x1-4046r6"></a></span>TTAAATAAATATAATCAAAAAATT
+     </div>
+     </li>
+     <li class="itemize">Secuencia 8:
+     <!--l. 291-->
+     <div class="lstlisting" id="listing-9"><span class="label"><a 
+ id="x1-4047r1"></a></span>ACAGCAAGCGAACCGGAATTGCCAGCTGGGGCGCCCTCTGGTAAGGTTGGGAAGCCCTGCAAAGTAAAC&#x00A0;<br /><span class="label"><a 
+ id="x1-4048r2"></a></span>TGGATGGCTTTCTTGCCGCCAAGGATCTGATGGCGCAGGGGATCAAGATCTGATCAAGAGACAGGATGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4049r3"></a></span>GGATCGTTTCGCATGATTGAACAAGATGGATTGCACGCAGGTTCTCCGGCCGCTTGGGTGGAGAGGCTA&#x00A0;<br /><span class="label"><a 
+ id="x1-4050r4"></a></span>TTCGGCTATGACTGGGCACAACAGACAATCGGCTGCTCTGATGCCGCCGTGTTCCGGCTGTCAGCGCAG&#x00A0;<br /><span class="label"><a 
+ id="x1-4051r5"></a></span>GGGCGCCCGGTTCTTTTTGTCAAGACCGACCTGTCCGGTGCCCTGAATGAACTGCAGGACGAGGCAGCG&#x00A0;<br /><span class="label"><a 
+ id="x1-4052r6"></a></span>CGGCTATCGTGGCTGGCCACGACGGGCGTTCCTTGCGCAGCTGTGCTCGACGTTGTCACTGAAGCGGGA&#x00A0;<br /><span class="label"><a 
+ id="x1-4053r7"></a></span>AGGGACTGGCTGCTATTGGGCGAAGTGCCGGGGCAGGATCTCCTGTCATCTCACCTTGCTCCTGCC
+     </div>
+     </li></ul>
+<!--l. 302--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.2.    </span> <a 
+ id="x1-50002.2"></a>Preguntas</h4>
+<!--l. 303--><p class="noindent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-5002x1">¿ Cuál es el tamaño de la secuencia que se utilizó para buscar en la base de datos? Incluye las unidades.
+     <!--l. 307--><p class="noindent" >Fuente de Información:
+         <ol  class="enumerate2" >
+         <li 
+  class="enumerate" id="x1-5004x1">¿Qué secuencia coincide con tu consulta? ¿Qué datos respaldan esta conclusión?
+         <!--l. 312--><p class="noindent" >Fuente de Información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5006x2">¿Qué organismo es la fuente más probable de la secuencia?
+         <!--l. 315--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5008x3">¿Cuál es el nombre común para este organismo?
+         <!--l. 318--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5010x4">¿Qué <span 
+class="bchri8t-">phylum </span>contiene a este organismo?
+         <!--l. 321--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5012x5">¿Cuál es el número de acceso para la secuencia de mejor coincidencia?
+         <!--l. 324--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5014x6">Estime el número de secuencias con un valor E menor que 0.01.
+         <!--l. 327--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5016x7">Si es posible, indique los nombres de al menos tres organismos diferentes con valores E significativos.
+         Registre el nombre del organismo, el nombre común y el valor E.
+         <!--l. 332--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5018x8">Toma  la  primera  secuencia  coincidente  en  la  tabla.  Para  esa  secuencia  sujeto  (<span 
+class="bchri8t-">subject)</span>,  determine  la
+         longitud de la alineación, en nucleótidos, y la fracción de nucleótidos que coinciden con su secuencia de
+         consulta.
+         </li>
+         <li 
+  class="enumerate" id="x1-5020x9">Observe la alineación con la primera secuencia coincidente y determine la longitud de la alineación y la
+         fracción de nucleótidos que coinciden con su secuencia. Haga un dibujo para representar la alineación
+         entre las dos secuencias e incluya las posiciones de inicio y final del mapa para ambas secuencias.
+         <!--l. 343--><p class="noindent" ><span 
+class="ectt-1000">Query </span><span 
+class="ectt-1000">&#x00A0;</span><span 
+class="ectt-1000">&#x00A0;------------------------------------</span>
+         <!--l. 345--><p class="noindent" ><span 
+class="ectt-1000">Subject ------------------------------------</span>
+         </li>
+         <li 
+  class="enumerate" id="x1-5022x10">Use los registros de GenBank, PubMed, Gene y UniGene para encontrar la posible función de la proteína
+         especificada por su secuencia de ADN. Describa qué se conoce sobre el papel de esta proteína en el
+         organismo que proporcionó el ADN.
+         <!--l. 351--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5024x11">¿Se expresa esta secuencia? ¿Cómo lo sabes?
+         <!--l. 354--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5026x12">Si su secuencia se expresa, ¿dónde se expresa?
+         <!--l. 357--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5028x13">¿Hay un tiempo específico durante el desarrollo cuando se expresa este gen?
+         <!--l. 361--><p class="noindent" >Fuente de información:
+         </li>
+         <li 
+  class="enumerate" id="x1-5030x14">¿Se conoce algo sobre los factores que hacen que se exprese tu secuencia?
+         <!--l. 364--><p class="noindent" >Fuente de información:</li></ol>
+     </li></ol>
+    
+</body></html> 
+
+
+
